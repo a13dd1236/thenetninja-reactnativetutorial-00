@@ -5,6 +5,8 @@ import { Text, View } from 'react-native';
 
 // Imported local files:
 
+import MainApp from './components/index';
+
 // Imported Styles:
 import { mainStyles, appStyles } from './styles/index';
 
@@ -16,15 +18,7 @@ const styles = {
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.paragraph}>Main App Header</Text>
-      </View>
-      <View style={styles.bodyContainer}>
-        <Text style={styles.paragraph}>Main App Body</Text>
-      </View>
-      <View style={styles.fotterContainer}>
-        <Text style={styles.paragraph}>Main App Fotter</Text>
-      </View>
+      <MainApp />
     </View>
   );
 }
