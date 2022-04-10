@@ -1,38 +1,30 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
+import { Text, View } from 'react-native';
 
-// You can import from local files
-import AssetExample from './components/AssetExample';
+// Imported pure npm javascript modules:
 
-// or any pure javascript modules available in npm
-import { Card } from 'react-native-paper';
+// Imported local files:
+
+// Imported Styles:
+import { mainStyles, appStyles } from './styles/index';
+
+const styles = {
+  ...mainStyles,
+  ...appStyles,
+};
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.paragraph}>
-        Change code in the editor and watch it change on your phone! Save to get a shareable url.
-      </Text>
-      <Card>
-        <AssetExample />
-      </Card>
+      <View style={styles.headerContainer}>
+        <Text style={styles.paragraph}>Main App Header</Text>
+      </View>
+      <View style={styles.bodyContainer}>
+        <Text style={styles.paragraph}>Main App Body</Text>
+      </View>
+      <View style={styles.fotterContainer}>
+        <Text style={styles.paragraph}>Main App Fotter</Text>
+      </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
